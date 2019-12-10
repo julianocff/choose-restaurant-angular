@@ -1,0 +1,18 @@
+:host {
+  max-width: 900px;
+  display: block;
+  margin: 25px auto ;
+}
+
+.item {
+  font-size: 24px;
+}
+
+.mat-icon-button:hover {
+  border: 2px solid red;
+}
+
+.mat-subheader {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+

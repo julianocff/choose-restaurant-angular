@@ -1,1 +1,26 @@
-<p>cadastro-restaurante works!</p>
+<div class="cadastroRestaurante">
+  <mat-form-field>
+    <input matInput placeholder="Nome">
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput placeholder="Endereço">
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-select placeholder="Categoria">
+      <mat-option value="option">Buffet Livre</mat-option>
+      <mat-option value="option">Churrascaria</mat-option>
+      <mat-option value="option">Comida por Quilo</mat-option>
+      <mat-option value="option">Food Truck</mat-option>
+      <mat-option value="option">Lanchonete</mat-option>
+      <mat-option value="option">Prato Feito</mat-option>
+      <mat-option value="option">Pizzaria</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <div class="btn-enviar">
+    <button mat-raised-button color="primary" (click)="confirmaCadastro()"> Cadastrar </button>
+    <button mat-raised-button (click)="cancelarCadastro()"> Cancelar </button>
+  </div>
+</div>

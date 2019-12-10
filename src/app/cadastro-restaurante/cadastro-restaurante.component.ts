@@ -7,6 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CadastroRestauranteComponent implements OnInit {
 
+  confirmaCadastro() {
+    if (!confirm('Deseja realizar o cadastro?')) {
+      return false;
+    }
+    alert('Cadastro realizado com sucesso!');
+  }
+
+  cancelarCadastro() {
+    location.reload();
+  }
   constructor() { }
 
   ngOnInit() {

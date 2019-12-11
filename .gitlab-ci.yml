@@ -9,7 +9,7 @@ pages:
   script:
   - npm install
   - npm run build:prod
-  - mkdir -p public && mv dist/testepraticodbserver/* public/
+  - mkdir -p public && mv dist/testePraticoDbserver/* public/
   artifacts:
     paths:
     - public

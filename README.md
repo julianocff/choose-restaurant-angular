@@ -1,4 +1,4 @@
-# Execute Project
+# Get the Project
 
 `git clone git@gitlab.com:julianocff/testepraticodbserver.git`
 

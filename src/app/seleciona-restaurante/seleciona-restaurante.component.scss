@@ -8,8 +8,12 @@
   font-size: 24px;
 }
 
-.mat-icon-button:hover {
-  border: 2px solid red;
+.mat-icon-button {
+  color: #ccc;
+}
+
+.mat-icon-button.ativo {
+  color: red;
 }
 
 .mat-subheader {

@@ -1,45 +1,11 @@
 <mat-list>
   <p mat-subheader>Restaurantes</p>
-  <mat-list-item>
-    <p mat-line class="item">Exemplo Restaurante</p>
-    <p mat-line class="item">Rua Fake, Pizaria</p>
-    <button mat-icon-button color="warn" aria-label="">
+  <mat-list-item *ngFor='let item of restaurantes'>
+    <p mat-line class="item">{{item.nome}}</p>
+    <p mat-line class="item">{{item.endereco}}, {{item.categoria}}</p>
+    <button mat-icon-button [class.ativo]="isAtivo(item)" (click)="votar(item)" aria-label="">
       <mat-icon>favorite</mat-icon>
     </button>
   </mat-list-item>
-  <mat-list-item>
-    <p mat-line>Exemplo Restaurante</p>
-    <p mat-line class="item">Rua Fake, Churrascaria</p>
-    <button mat-icon-button color="warn" aria-label="">
-      <mat-icon>favorite</mat-icon>
-    </button>
-  </mat-list-item>
-  <mat-list-item>
-    <p mat-line>Exemplo Restaurante</p>
-    <p mat-line class="item">Rua Fake, Buffet Livre</p>
-    <button mat-icon-button color="warn" aria-label="">
-      <mat-icon>favorite</mat-icon>
-    </button>
-  </mat-list-item>
-  <mat-list-item>
-    <p mat-line>Exemplo Restaurante</p>
-    <p mat-line class="item">Rua Fake, Buffet Livre</p>
-    <button mat-icon-button color="warn" aria-label="">
-      <mat-icon>favorite</mat-icon>
-    </button>
-  </mat-list-item>
-  <mat-list-item>
-      <p mat-line>Exemplo Restaurante</p>
-      <p mat-line class="item">Rua Fake, Prato Pronto</p>
-      <button mat-icon-button color="warn" aria-label="">
-        <mat-icon>favorite</mat-icon>
-      </button>
-    </mat-list-item>
-    <mat-list-item>
-        <p mat-line>Exemplo Restaurante</p>
-        <p mat-line class="item">Rua Fake, Lanchonete</p>
-        <button mat-icon-button color="warn" aria-label="">
-          <mat-icon>favorite</mat-icon>
-        </button>
-      </mat-list-item>
+  <button mat-raised-button color="primary" (click)="enviar()">Enviar</button>
 </mat-list>

@@ -1,21 +1,21 @@
 <div class="cadastroRestaurante">
   <mat-form-field>
-    <input matInput placeholder="Nome">
+    <input matInput [(ngModel)]="nome" required placeholder="Nome">
   </mat-form-field>
 
   <mat-form-field>
-    <input matInput placeholder="Endereço">
+    <input matInput [(ngModel)]="endereco" required placeholder="Endereço">
   </mat-form-field>
 
   <mat-form-field>
-    <mat-select placeholder="Categoria">
-      <mat-option value="option">Buffet Livre</mat-option>
-      <mat-option value="option">Churrascaria</mat-option>
-      <mat-option value="option">Comida por Quilo</mat-option>
-      <mat-option value="option">Food Truck</mat-option>
-      <mat-option value="option">Lanchonete</mat-option>
-      <mat-option value="option">Prato Feito</mat-option>
-      <mat-option value="option">Pizzaria</mat-option>
+    <mat-select [(ngModel)]="categoria" required placeholder="Categoria">
+      <mat-option value="Buffet">Buffet Livre</mat-option>
+      <mat-option value="Churrascaria">Churrascaria</mat-option>
+      <mat-option value="Comida por Quilo">Comida por Quilo</mat-option>
+      <mat-option value="Food Truck">Food Truck</mat-option>
+      <mat-option value="Lanchonete">Lanchonete</mat-option>
+      <mat-option value="Prato Feito">Prato Feito</mat-option>
+      <mat-option value="Pizzaria">Pizzaria</mat-option>
     </mat-select>
   </mat-form-field>
 

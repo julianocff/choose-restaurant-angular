@@ -2,10 +2,10 @@
   <p mat-subheader>Restaurantes</p>
   <mat-list-item *ngFor='let item of restaurantes'>
     <p mat-line class="item">{{item.nome}}</p>
-    <p mat-line class="item">{{item.endereco}}, {{item.categoria}}</p>
+    <p mat-line class="item">{{item.endereco}}, {{item.categoria}} ({{item.votos}})</p>
     <button mat-icon-button [class.ativo]="isAtivo(item)" (click)="votar(item)" aria-label="">
       <mat-icon>favorite</mat-icon>
     </button>
   </mat-list-item>
-  <button mat-raised-button color="primary" (click)="enviar()">Enviar</button>
+  <button mat-raised-button color="primary" [disabled]="this.ultimoVoto" (click)="enviar()">Enviar</button>
 </mat-list>

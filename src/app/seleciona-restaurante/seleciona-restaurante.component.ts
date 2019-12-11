@@ -10,10 +10,18 @@ export class SelecionaRestauranteComponent implements OnInit {
 
   restaurantes = [];
   ativo;
+  ultimoVoto;
 
   constructor(private api: ApiService) { }
 
   ngOnInit() {
+    this.getAll();
+    this.api.getUltimoVoto().subscribe((response) => {
+      this.ultimoVoto = response;
+    });
+  }
+
+  getAll() {
     this.api.getAll().subscribe(
       (response) => {
         this.restaurantes = response;
@@ -22,15 +30,22 @@ export class SelecionaRestauranteComponent implements OnInit {
   }
 
   isAtivo(item) {
-    return item === this.ativo;
+    return item === this.ativo || item === this.ultimoVoto;
   }
 
   votar(item) {
-    this.ativo = item;
+    if (!this.ultimoVoto) {
+      this.ativo = item;
+    }
   }
 
   enviar() {
-
+    if (!this.ativo) {
+      return alert('Selecione um restaurante.');
+    }
+    this.api.enviar(this.ativo).subscribe(() => {
+      this.getAll();
+    });
   }
 
 }

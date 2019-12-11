@@ -17,6 +17,7 @@ import { HomeComponent } from './home/home.component';
 import { CadastroRestauranteComponent } from './cadastro-restaurante/cadastro-restaurante.component';
 import { SelecionaRestauranteComponent } from './seleciona-restaurante/seleciona-restaurante.component';
 import { MatIconModule } from '@angular/material/icon';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { MatIconModule } from '@angular/material/icon';
     MatToolbarModule,
     MatIconModule,
     MatListModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

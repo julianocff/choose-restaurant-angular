@@ -1,6 +1,7 @@
-
-<span>ganhador</span>
-
-<pre>
-{{ ganhador | json }}
-</pre>
+<mat-list>
+  <p mat-subheader>Restaurante Escolhido</p>
+  <mat-list-item>
+    <p mat-line>{{ganhador.nome}}</p>
+    <p mat-line>{{ganhador.endereco}}, {{ganhador.categoria}}</p>
+  </mat-list-item>
+</mat-list>

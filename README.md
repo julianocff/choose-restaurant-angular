@@ -1,10 +1,10 @@
 # Link to Project
 
-http://julianocff.gitlab.io/testepraticodbserver/
+http://julianocff.gitlab.io/projangular/
 
 # Get the Project
 
-`git clone git@gitlab.com:julianocff/testepraticodbserver.git`
+`git clone git@gitlab.com:julianocff/projangular.git`
 
 # Development Server
 
